@@ -16,11 +16,12 @@ public class TestBase {
 
     @BeforeAll
     static void browserConfiguration() {
-        Configuration.baseUrl = "https://alfabank.ru";
+
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserVersion = System.getProperty("browserVersion", "127.0");
         Configuration.timeout = 2000;
+        Configuration.holdBrowserOpen = true;
         //Configuration.remote = System.getProperty("browserRemote", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
