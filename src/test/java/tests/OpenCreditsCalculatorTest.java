@@ -1,6 +1,7 @@
 package tests;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pages.CreditCalculatorPage;
 import pages.MainAlfaPage;
@@ -11,14 +12,33 @@ public class OpenCreditsCalculatorTest extends TestBase{
     @BeforeEach
     public void setUp() {
         mainAlfaPage.openPage();
-
+        creditCalculatorPage = new CreditCalculatorPage();
+    }
+    String CreditTitle = "Кредиты";
+    String CreditCalculator = "Кредитный калькулятор";
+    @Test
+    @DisplayName("Проверяем, что при наведении на меню \"Частным лицам\"открывается меню")
+    void openMenuWithHoverInPrivatePersonTest(){
+        MainAlfaPage.openPage()
+                .hoverPrivatePerson()
+                .visiblePrivatePersonMenu();
     }
     @Test
-    void openCreditsCalculatorTest(){
+    @DisplayName("Проверка наличия пункта \"Кредиты\" в меню")
+    void openMenuWithHoverInPrivatePerson12Test(){
+        MainAlfaPage.openPage()
+                .hoverPrivatePerson()
+                .textCredits(CreditTitle);
+                //.checkTitleCreditTextTest(CreditTitle);
+    }
+
+    @Test
+    @DisplayName("Открываем страницу кредитный калькулятор")
+    void openCreditsCalculatorPageTest(){
         MainAlfaPage.openPage()
                 .hoverPrivatePerson()
                 .hoverCredits()
                 .clickCreditCalculator();
-                creditCalculatorPage.checkTitleTextTest("Кредитный калькулятор");
+                creditCalculatorPage.checkTitleCreditCalculatorTextTest(CreditCalculator);
     }
 }
