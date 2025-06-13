@@ -2,12 +2,13 @@ package tests;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.CreditCalculatorPage;
 import pages.EnterAlfaBankPage;
 import pages.EnterSideBarPage;
 import pages.MainAlfaPage;
-
+@Tag("AlfaBankWeb")
 public class MainAlfaWebTest extends TestBase {
 
     private MainAlfaPage mainAlfaPage;
@@ -68,5 +69,11 @@ public class MainAlfaWebTest extends TestBase {
                 .clickEnterSideBar();
         enterSideBarPage.clickEnterInAlfaOnline();
         enterAlfaBankPage.visiblePhoneInputLine();
+    }
+    @Test
+    @DisplayName("Открываем страницу \"Стать клиентом\"")
+    void openBecomeCustomersPageTest() {
+        MainAlfaPage.openPage()
+                        .clickBecomeCustomers();
     }
 }

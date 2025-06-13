@@ -18,7 +18,8 @@ public class MainAlfaPage {
             credits = $("[data-test-id='link-loans'] p[data-test-id='text']"),
             creditCalculator = $$("a[href*='calculator'] p[data-test-id='text']").first(),
             privatePersonMenu = $("[data-test-id='dd-content']"),
-            enterSideBar = $("button[data-widget-name='AnalyticsEventSender']");
+            enterSideBar = $("button[data-widget-name='AnalyticsEventSender']"),
+            becomeCustomers = $("[data-widget-name='AnalyticsEventSender'][href*='retail/startclient']");
 
     public MainAlfaPage hoverPrivatePerson() {
         this.privatePerson.hover();
@@ -44,6 +45,9 @@ public class MainAlfaPage {
     }
     public void clickEnterSideBar() {
         this.enterSideBar.click();
+    }
+    public void clickBecomeCustomers() {
+        this.becomeCustomers.click();
     }
 
 }
