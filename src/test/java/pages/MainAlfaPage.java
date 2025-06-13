@@ -17,7 +17,8 @@ public class MainAlfaPage {
     private final SelenideElement privatePerson = $("[data-test-id='test-retail-link'] p[data-test-id='text']"),
             credits = $("[data-test-id='link-loans'] p[data-test-id='text']"),
             creditCalculator = $$("a[href*='calculator'] p[data-test-id='text']").first(),
-            privatePersonMenu = $("[data-test-id='dd-content']");
+            privatePersonMenu = $("[data-test-id='dd-content']"),
+            enterSideBar = $("button[data-widget-name='AnalyticsEventSender']");
 
     public MainAlfaPage hoverPrivatePerson() {
         this.privatePerson.hover();
@@ -40,6 +41,9 @@ public class MainAlfaPage {
     public MainAlfaPage visiblePrivatePersonMenu() {
         this.privatePersonMenu.shouldBe(visible);
         return this;
+    }
+    public void clickEnterSideBar() {
+        this.enterSideBar.click();
     }
 
 }
