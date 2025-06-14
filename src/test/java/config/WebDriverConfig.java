@@ -18,7 +18,6 @@ public interface WebDriverConfig extends Config {
     String creditTitle();
 
     @Key("expected.calculator.title")
-    //@DefaultValue("Кредитный калькулятор")
     String creditCalculator();
 
     @Key("textDebitCardAlfaOnly")
