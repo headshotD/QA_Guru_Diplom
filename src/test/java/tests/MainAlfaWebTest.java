@@ -1,20 +1,24 @@
 package tests;
 
+import config.WebDriverConfig;
+import io.qameta.allure.Owner;
+import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import pages.CreditCalculatorPage;
-import pages.EnterAlfaBankPage;
-import pages.EnterSideBarPage;
-import pages.MainAlfaPage;
+import pages.*;
+
 @Tag("AlfaBankWeb")
 public class MainAlfaWebTest extends TestBase {
+
+    WebDriverConfig config = ConfigFactory.create(WebDriverConfig.class);
 
     private MainAlfaPage mainAlfaPage;
     private CreditCalculatorPage creditCalculatorPage;
     private EnterSideBarPage enterSideBarPage;
     private EnterAlfaBankPage enterAlfaBankPage;
+    private DebitCardsPage debitCardsPage;
 
     @BeforeEach
     public void setUp() {
@@ -22,10 +26,8 @@ public class MainAlfaWebTest extends TestBase {
         creditCalculatorPage = new CreditCalculatorPage();
         enterSideBarPage = new EnterSideBarPage();
         enterAlfaBankPage = new EnterAlfaBankPage();
+        debitCardsPage = new DebitCardsPage();
     }
-
-    String CreditTitle = "Кредиты";
-    String CreditCalculator = "Кредитный калькулятор";
 
     @Test
     @DisplayName("Проверяем, что при наведении на меню \"Частным лицам\"открывается меню")
@@ -40,7 +42,7 @@ public class MainAlfaWebTest extends TestBase {
     void openMenuWithHoverInPrivatePerson12Test() {
         MainAlfaPage.openPage()
                 .hoverPrivatePerson()
-                .textCredits(CreditTitle);
+                .textCredits();
     }
 
     @Test
@@ -50,7 +52,7 @@ public class MainAlfaWebTest extends TestBase {
                 .hoverPrivatePerson()
                 .hoverCredits()
                 .clickCreditCalculator();
-        creditCalculatorPage.checkTitleCreditCalculatorTextTest(CreditCalculator);
+        creditCalculatorPage.checkTitleCreditCalculatorTextTest();
     }
 
     @Test
@@ -76,4 +78,12 @@ public class MainAlfaWebTest extends TestBase {
         MainAlfaPage.openPage()
                         .clickBecomeCustomers();
     }
+    @Test
+    @DisplayName("Открываем страницу заказа карты AlfaOnly")
+    void clickOnAlfaOnlyCard() {
+        MainAlfaPage.openPage()
+                .clickOnAlfaOnlyCard();
+        debitCardsPage.textAlfaOnlyCard();
+    }
+
 }

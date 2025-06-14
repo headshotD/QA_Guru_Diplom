@@ -2,13 +2,17 @@ package pages;
 
 import com.codeborne.selenide.SelenideElement;
 
+import config.WebDriverConfig;
 import lombok.Data;
+import org.aeonbits.owner.ConfigFactory;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 
 @Data
 public class MainAlfaPage {
+    WebDriverConfig config = ConfigFactory.create(WebDriverConfig.class);
+
     public static MainAlfaPage openPage() {
         open("https://alfabank.ru/");
         return new MainAlfaPage();
@@ -19,10 +23,16 @@ public class MainAlfaPage {
             creditCalculator = $$("a[href*='calculator'] p[data-test-id='text']").first(),
             privatePersonMenu = $("[data-test-id='dd-content']"),
             enterSideBar = $("button[data-widget-name='AnalyticsEventSender']"),
-            becomeCustomers = $("[data-widget-name='AnalyticsEventSender'][href*='retail/startclient']");
+            becomeCustomers = $("[data-widget-name='AnalyticsEventSender'][href*='retail/startclient']"),
+            alfaOnlyCard = $("div [href*='debit-cards/?rp-tab=premium']");
 
     public MainAlfaPage hoverPrivatePerson() {
         this.privatePerson.hover();
+        return this;
+    }
+
+    public MainAlfaPage clickOnAlfaOnlyCard() {
+        this.alfaOnlyCard.click();
         return this;
     }
 
@@ -30,8 +40,9 @@ public class MainAlfaPage {
         this.credits.hover();
         return this;
     }
-    public void textCredits(String value) {
-        credits.shouldHave(text(value));
+
+    public void textCredits() {
+        credits.shouldHave(text(config.creditTitle()));
     }
 
     public CreditCalculatorPage clickCreditCalculator() {
@@ -43,9 +54,11 @@ public class MainAlfaPage {
         this.privatePersonMenu.shouldBe(visible);
         return this;
     }
+
     public void clickEnterSideBar() {
         this.enterSideBar.click();
     }
+
     public void clickBecomeCustomers() {
         this.becomeCustomers.click();
     }

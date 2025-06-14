@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.$;
 public class EnterAlfaBankPage {
     private final SelenideElement phoneInputLine = $("[data-test-id='phoneInput']");
 
-    public EnterAlfaBankPage visiblePhoneInputLine(){
+    public EnterAlfaBankPage visiblePhoneInputLine() {
         phoneInputLine.shouldHave(visible);
         return new EnterAlfaBankPage();
     }

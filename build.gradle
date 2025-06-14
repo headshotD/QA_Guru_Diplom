@@ -34,11 +34,14 @@ dependencies {
     testImplementation 'org.aspectj:aspectjweaver:1.9.23'
     testImplementation 'org.slf4j:slf4j-simple:2.0.7'
     testImplementation 'org.aeonbits.owner:owner:1.0.12'
+    testImplementation 'io.github.bonigarcia:webdrivermanager:5.6.3'
 
 }
 test {
     useJUnitPlatform()
+    systemProperties System.getProperties()
 }
+
 tasks.withType(Test) {
     useJUnitPlatform()
     systemProperties(System.getProperties())
