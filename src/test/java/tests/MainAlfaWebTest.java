@@ -1,7 +1,6 @@
 package tests;
 
 import config.WebDriverConfig;
-import io.qameta.allure.Owner;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -39,7 +38,7 @@ public class MainAlfaWebTest extends TestBase {
 
     @Test
     @DisplayName("Проверка наличия пункта \"Кредиты\" в меню")
-    void openMenuWithHoverInPrivatePerson12Test() {
+    void openMenuWithHoverAndCheckCreditTextTest() {
         MainAlfaPage.openPage()
                 .hoverPrivatePerson()
                 .textCredits();
@@ -80,10 +79,18 @@ public class MainAlfaWebTest extends TestBase {
     }
     @Test
     @DisplayName("Открываем страницу заказа карты AlfaOnly")
-    void clickOnAlfaOnlyCard() {
+    void clickOnAlfaOnlyCardTest() {
         MainAlfaPage.openPage()
                 .clickOnAlfaOnlyCard();
         debitCardsPage.textAlfaOnlyCard();
+    }
+    @Test
+    @DisplayName("Открываем виджет поиска и проверяем, что нашлось значение qa.guru")
+    void searchOnTopWidgetTest() {
+        MainAlfaPage.openPage()
+                .clickOnSearchButton()
+                .enterTextInSearchInput()
+                .searchResults();
     }
 
 }
