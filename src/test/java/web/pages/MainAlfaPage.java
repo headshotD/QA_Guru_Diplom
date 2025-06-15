@@ -1,4 +1,4 @@
-package web.tests.pages;
+package web.pages;
 
 import com.codeborne.selenide.SelenideElement;
 import config.WebDriverConfig;
@@ -27,7 +27,7 @@ public class MainAlfaPage {
             becomeCustomers = $("[data-widget-name='AnalyticsEventSender'][href*='retail/startclient']"),
             searchButtonOnTop = $("[data-test-id='test-ya-button']"),
             searchInput = $("[data-test-id='search-input']"),
-            alfaOnlyCard = $x("//*[text() = 'Ваш премиальный сервис']").shouldBe(interactable, Duration.ofSeconds(3));
+            alfaOnlyCard = $("a[href*='everyday/debit-cards/?rp-tab=premium']");
 
     public void searchResults() {
         switchTo().frame($x("//iframe[@data-test-id='ya-site-search-iframe']"));
