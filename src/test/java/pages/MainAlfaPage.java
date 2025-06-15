@@ -24,10 +24,27 @@ public class MainAlfaPage {
             privatePersonMenu = $("[data-test-id='dd-content']"),
             enterSideBar = $("button[data-widget-name='AnalyticsEventSender']"),
             becomeCustomers = $("[data-widget-name='AnalyticsEventSender'][href*='retail/startclient']"),
-            alfaOnlyCard = $x("//*[text() = 'Ваш премиальный сервис']");
+            searchButtonOnTop = $("[data-test-id='test-ya-button']"),
+            searchInput = $("[data-test-id='search-input']"),
+            alfaOnlyCard = $x("//*[text() = 'Ваш премиальный сервис']").scrollIntoView(true);
+
+    public void searchResults() {
+        switchTo().frame($x("//iframe[@data-test-id='ya-site-search-iframe']"));
+        $("[class='b-serp-list']").shouldHave(text(config.searchText()));
+    }
 
     public MainAlfaPage hoverPrivatePerson() {
         this.privatePerson.hover();
+        return this;
+    }
+
+    public MainAlfaPage clickOnSearchButton() {
+        this.searchButtonOnTop.click();
+        return this;
+    }
+
+    public MainAlfaPage enterTextInSearchInput() {
+        this.searchInput.setValue(config.searchText()).pressEnter();
         return this;
     }
 
