@@ -1,11 +1,10 @@
-package pages;
+package web.tests.pages;
 
 import config.WebDriverConfig;
 import org.aeonbits.owner.ConfigFactory;
 
-import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.$;
 
 
 public class CreditCalculatorPage {

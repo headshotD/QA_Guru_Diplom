@@ -1,10 +1,11 @@
-package pages;
+package web.tests.pages;
 
 import com.codeborne.selenide.SelenideElement;
-
 import config.WebDriverConfig;
 import lombok.Data;
 import org.aeonbits.owner.ConfigFactory;
+
+import java.time.Duration;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
@@ -26,7 +27,7 @@ public class MainAlfaPage {
             becomeCustomers = $("[data-widget-name='AnalyticsEventSender'][href*='retail/startclient']"),
             searchButtonOnTop = $("[data-test-id='test-ya-button']"),
             searchInput = $("[data-test-id='search-input']"),
-            alfaOnlyCard = $x("//*[text() = 'Ваш премиальный сервис']");
+            alfaOnlyCard = $x("//*[text() = 'Ваш премиальный сервис']").shouldBe(interactable, Duration.ofSeconds(3));
 
     public void searchResults() {
         switchTo().frame($x("//iframe[@data-test-id='ya-site-search-iframe']"));
