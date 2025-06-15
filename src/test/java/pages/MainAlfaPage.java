@@ -24,7 +24,7 @@ public class MainAlfaPage {
             privatePersonMenu = $("[data-test-id='dd-content']"),
             enterSideBar = $("button[data-widget-name='AnalyticsEventSender']"),
             becomeCustomers = $("[data-widget-name='AnalyticsEventSender'][href*='retail/startclient']"),
-            alfaOnlyCard = $("div [href*='debit-cards/?rp-tab=premium']");
+            alfaOnlyCard = $x("//*[text() = 'Ваш премиальный сервис']");
 
     public MainAlfaPage hoverPrivatePerson() {
         this.privatePerson.hover();
