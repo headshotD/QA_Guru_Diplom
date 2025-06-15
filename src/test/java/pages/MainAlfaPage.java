@@ -26,7 +26,7 @@ public class MainAlfaPage {
             becomeCustomers = $("[data-widget-name='AnalyticsEventSender'][href*='retail/startclient']"),
             searchButtonOnTop = $("[data-test-id='test-ya-button']"),
             searchInput = $("[data-test-id='search-input']"),
-            alfaOnlyCard = $x("//*[text() = 'Ваш премиальный сервис']").scrollIntoView(true);
+            alfaOnlyCard = $x("//*[text() = 'Ваш премиальный сервис']");
 
     public void searchResults() {
         switchTo().frame($x("//iframe[@data-test-id='ya-site-search-iframe']"));
