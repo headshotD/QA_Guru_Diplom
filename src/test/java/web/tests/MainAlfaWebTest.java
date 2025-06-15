@@ -1,4 +1,4 @@
-package tests;
+package web.tests;
 
 import config.WebDriverConfig;
 import org.aeonbits.owner.ConfigFactory;
@@ -6,7 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import pages.*;
+import web.tests.pages.*;
 
 @Tag("AlfaBankWeb")
 public class MainAlfaWebTest extends TestBase {

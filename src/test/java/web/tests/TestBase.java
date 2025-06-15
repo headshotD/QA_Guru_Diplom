@@ -1,4 +1,4 @@
-package tests;
+package web.tests;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
@@ -23,7 +23,7 @@ public class TestBase {
         Configuration.pageLoadStrategy = "normal";
         Configuration.timeout = 2000;
         //Configuration.holdBrowserOpen = true;
-        Configuration.remote = System.getProperty("browserRemote", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
+        //Configuration.remote = System.getProperty("browserRemote", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
