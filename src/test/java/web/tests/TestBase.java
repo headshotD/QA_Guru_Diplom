@@ -22,6 +22,7 @@ public class TestBase {
         Configuration.browserVersion = System.getProperty("browserVersion", "127.0");
         Configuration.pageLoadStrategy = "normal";
         Configuration.timeout = 5000;
+        //Configuration.headless =true;
         //Configuration.holdBrowserOpen = true;
         Configuration.remote = System.getProperty("browserRemote", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
 
