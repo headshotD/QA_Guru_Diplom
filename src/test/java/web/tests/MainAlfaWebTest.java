@@ -1,6 +1,6 @@
 package web.tests;
 
-import config.WebDriverConfig;
+import web.config.WebDriverConfig;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -26,6 +26,7 @@ public class MainAlfaWebTest extends TestBase {
         enterSideBarPage = new EnterSideBarPage();
         enterAlfaBankPage = new EnterAlfaBankPage();
         debitCardsPage = new DebitCardsPage();
+
     }
 
     @Test

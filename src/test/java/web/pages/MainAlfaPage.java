@@ -1,7 +1,7 @@
 package web.pages;
 
 import com.codeborne.selenide.SelenideElement;
-import config.WebDriverConfig;
+import web.config.WebDriverConfig;
 import lombok.Data;
 import org.aeonbits.owner.ConfigFactory;
 

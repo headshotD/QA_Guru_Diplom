@@ -1,4 +1,4 @@
-package config;
+package web.config;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.aeonbits.owner.ConfigFactory;

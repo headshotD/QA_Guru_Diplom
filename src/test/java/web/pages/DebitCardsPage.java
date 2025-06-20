@@ -1,7 +1,7 @@
 package web.pages;
 
 import com.codeborne.selenide.SelenideElement;
-import config.WebDriverConfig;
+import web.config.WebDriverConfig;
 import org.aeonbits.owner.ConfigFactory;
 
 import static com.codeborne.selenide.Condition.text;
