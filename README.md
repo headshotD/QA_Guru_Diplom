@@ -116,9 +116,9 @@ ____
 </p>
 
 <p align="center">
-<img title="Selenoid Video" src="media/badNumber.gif" width="550" height="350"  alt="video">   
+<img title="Selenoid Video" src="media/badNumber.gif" width="350" height="550"  alt="video">   
 </p>
 
 <p align="center">
-<img title="Selenoid Video" src="media/successfull.gif" width="550" height="350"  alt="video">   
+<img title="Selenoid Video" src="media/successfull.gif" width="350" height="550"  alt="video">   
 </p>
