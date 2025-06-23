@@ -15,20 +15,21 @@
 ## :ballot_box_with_check:Технологии и инструменты:
 
 <p align="center">
-<img width="6%" title="IntelliJ IDEA" src="media/intellij-idea-svgrepo-com.svg">
-<img width="6%" title="Java" src="media/java-svgrepo-com.svg">
-<img width="6%" title="Selenide" src="media/Selenide.svg">
-<img width="6%" title="Selenoid" src="media/Selenoid.svg">
-<img width="6%" title="Allure Report" src="media/Allure.svg">
-<img width="6%" title="Gradle" src="media/gradle-svgrepo-com.svg">
-<img width="6%" title="JUnit5" src="media/Junit5.svg">
-<img width="6%" title="GitHub" src="media/github-badge-svgrepo-com.svg">
-<img width="6%" title="Jenkins" src="media/Jenkins.svg">
-<img width="6%" title="Telegram" src="media/Telegram.svg">
-<img width="5%" title="Appium" src="media/appium.svg">
-<img width="5%" title="AndroidStudio" src="media/androidstudio.svg">
+<img width="7%" title="IntelliJ IDEA" src="media/intellij-idea-svgrepo-com.svg">
+<img width="7%" title="Java" src="media/java-svgrepo-com.svg">
+<img width="7%" title="Selenide" src="media/Selenide.svg">
+<img width="7%" title="Selenoid" src="media/Selenoid.svg">
+<img width="7%" title="Allure Report" src="media/Allure.svg">
+<img width="7%" title="Gradle" src="media/gradle-svgrepo-com.svg">
+<img width="7%" title="JUnit5" src="media/Junit5.svg">
+<img width="7%" title="GitHub" src="media/github-badge-svgrepo-com.svg">
+<img width="7%" title="Jenkins" src="media/Jenkins.svg">
+<img width="7%" title="Telegram" src="media/Telegram.svg">
+<img width="7%" title="Appium" src="media/appium.svg">
+<img width="7%" title="AndroidStudio" src="media/androidstudio.svg">
 </p>
 <a id="cases"></a>
+
 ## :ballot_box_with_check: Реализованные Web проверки:
 
 - Проверка, что при наведении на меню "Частным лицам" открывается меню,
