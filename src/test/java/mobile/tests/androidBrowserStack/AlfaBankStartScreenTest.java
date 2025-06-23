@@ -7,6 +7,7 @@ import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import mobile.tests.TestBase;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -19,6 +20,7 @@ import static io.qameta.allure.Allure.step;
 @Tag("All")
 @Tag("android_browserstack")
 @Epic("Экран входа в приложении")
+@DisplayName("Тесты на стартовом экране приложения альфа-банка")
 public class AlfaBankStartScreenTest extends TestBase {
     @BeforeAll
     static void setup() {

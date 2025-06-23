@@ -15,6 +15,7 @@ import web.pages.*;
 @Tag("AlfaBankWeb")
 @Tag("All")
 @Epic("Главная страница в альфа-банке")
+@DisplayName("Тесты на главной странице альфа-банка")
 public class MainAlfaWebTest extends TestBase {
 
     WebDriverConfig config = ConfigFactory.create(WebDriverConfig.class);

@@ -6,7 +6,7 @@
 
 - Технологии и инструменты
 - Список проверок, реализованных в тестах
-- Запуск тестов (сборка в Jenkins) и из терминала
+- Запуск тестов в Jenkins и из терминала
 - Allure-отчет
 - Уведомление в Telegram о результатах прогона тестов
 - Видео пример прохождения тестов
@@ -90,7 +90,7 @@ clean
 ## Основная страница отчёта
 
 <p align="center">  
-<img title="Allure Overview Dashboard" src="media/AllureReport.jpg" width="850">  
+<img title="Allure Overview Dashboard" src="media/AllureReport.png" width="850">  
 </p>  
 
 ____
