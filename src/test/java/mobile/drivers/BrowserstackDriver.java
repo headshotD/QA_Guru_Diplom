@@ -27,7 +27,7 @@ public class BrowserstackDriver implements WebDriverProvider {
         Map<String, Object> bstackOptions = new HashMap<>();
         bstackOptions.put("userName", config.user());
         bstackOptions.put("accessKey", config.key());
-        bstackOptions.put("projectName", "ALfa Bank");
+        bstackOptions.put("projectName", "Alfa Bank");
         bstackOptions.put("buildName", "Android Build");
         bstackOptions.put("sessionName", "Mobile Tests");
         caps.setCapability("platformName", "android");
