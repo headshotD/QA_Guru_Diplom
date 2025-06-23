@@ -1,5 +1,9 @@
 package web.tests;
 
+import io.qameta.allure.Epic;
+import io.qameta.allure.Owner;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import web.config.WebDriverConfig;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.BeforeEach;
@@ -10,6 +14,7 @@ import web.pages.*;
 
 @Tag("AlfaBankWeb")
 @Tag("All")
+@Epic("Главная страница в альфа-банке")
 public class MainAlfaWebTest extends TestBase {
 
     WebDriverConfig config = ConfigFactory.create(WebDriverConfig.class);
@@ -31,6 +36,8 @@ public class MainAlfaWebTest extends TestBase {
     }
 
     @Test
+    @Owner("ONamozov")
+    @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Проверяем, что при наведении на меню \"Частным лицам\"открывается меню")
     void openMenuWithHoverInPrivatePersonTest() {
         MainAlfaPage.openPage()
@@ -39,6 +46,8 @@ public class MainAlfaWebTest extends TestBase {
     }
 
     @Test
+    @Owner("ONamozov")
+    @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Проверка наличия пункта \"Кредиты\" в меню")
     void openMenuWithHoverAndCheckCreditTextTest() {
         MainAlfaPage.openPage()
@@ -47,6 +56,8 @@ public class MainAlfaWebTest extends TestBase {
     }
 
     @Test
+    @Owner("ONamozov")
+    @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Открываем страницу кредитный калькулятор")
     void openCreditsCalculatorPageTest() {
         MainAlfaPage.openPage()
@@ -57,6 +68,8 @@ public class MainAlfaWebTest extends TestBase {
     }
 
     @Test
+    @Owner("ONamozov")
+    @Severity(SeverityLevel.NORMAL)
     @DisplayName("Открываем страницу \"Войти\"")
     void openEnterSideBarTest() {
         MainAlfaPage.openPage()
@@ -66,6 +79,8 @@ public class MainAlfaWebTest extends TestBase {
     }
 
     @Test
+    @Owner("ONamozov")
+    @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Открываем страницу \"Войти\" и выбираем \"Войти в Альфа-онлайн\"")
     void openEnterSideBarAndClickOnAlfaOnlineTest() {
         MainAlfaPage.openPage()
@@ -73,20 +88,29 @@ public class MainAlfaWebTest extends TestBase {
         enterSideBarPage.clickEnterInAlfaOnline();
         enterAlfaBankPage.visiblePhoneInputLine();
     }
+
     @Test
+    @Owner("ONamozov")
+    @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Открываем страницу \"Стать клиентом\"")
     void openBecomeCustomersPageTest() {
         MainAlfaPage.openPage()
-                        .clickBecomeCustomers();
+                .clickBecomeCustomers();
     }
+
     @Test
+    @Owner("ONamozov")
+    @Severity(SeverityLevel.NORMAL)
     @DisplayName("Открываем страницу заказа карты AlfaOnly")
     void clickOnAlfaOnlyCardTest() {
         MainAlfaPage.openPage()
                 .clickOnAlfaOnlyCard();
         debitCardsPage.textAlfaOnlyCard();
     }
+
     @Test
+    @Owner("ONamozov")
+    @Severity(SeverityLevel.MINOR)
     @DisplayName("Открываем виджет поиска и проверяем, что нашлось значение qa.guru")
     void searchOnTopWidgetTest() {
         MainAlfaPage.openPage()
