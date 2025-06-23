@@ -42,33 +42,46 @@
 
 
 <p align="center">  
-<img src="media/JenkinsBuild.jpg" alt="Jenkins" width="950"/></a>  
+<img src="media/JenkinsBuild.png" alt="Jenkins" width="950"/></a>  
 </p>
 
 
 ## :ballot_box_with_check: Параметры сборки в Jenkins:
-
+- Tag (Уникальный тэг тестов)
 - browser (браузер, по умолчанию chrome)
 - browserVersion (версия браузера, по умолчанию 127.0)
 - browserSize (размер окна браузера, по умолчанию 1920x1080)
 
 
 ## Команда для запуска из терминала
-Локальный запуск
+Локальный запуск mobile Android тестов
 ```bash
-gradle clean UseTech
+gradle clean AlfaBankAndroidEmulation
 ```
-Запуск с параметрами:
+Удаленный запуск mobile Android тестов
+```bash
+gradle clean android_browserstack
+```
+Локальный запуск для запуска Web тестов
+```bash
+gradle clean AlfaBankWeb
+```
+Локальный запуск всех тестов
+```bash
+gradle clean AllTests
+```
+Запуск с параметрами Web тестов:
 ```bash  
--Dbrowser=chrome -DbrowserSize=1920x1080 -DbrowserVersion=128.0
+gradle clean AlfaBankWeb -Dbrowser=chrome -DbrowserSize=1920x1080 -DbrowserVersion=128.0
 ```
 Удаленный запуск через Jenkins:
 ```bash  
-clean UseTech
+clean
+"${TAG}"
 -Dbrowser="${BROWSER}"
 -DbrowserSize="${BROWSER_SIZE}"
 -DbrowserVersion="${BROWSER_VERSION}"
--DbrowserRemote="https://log:pass@${BROWSER_REMOTE}/wd/hub"
+-DbrowserRemote="https://user1:1234@${BROWSER_REMOTE}/wd/hub"
 ```
 
 ## <img alt="Allure" height="25" src="media/Allure.svg" width="25"/></a>  <a name="Allure"></a>Allure Report	</a>
