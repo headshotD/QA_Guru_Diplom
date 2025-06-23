@@ -28,6 +28,7 @@ public class MainAlfaPage {
             becomeCustomers = $("[data-widget-name='AnalyticsEventSender'][href*='retail/startclient']"),
             searchButtonOnTop = $("[data-test-id='test-ya-button']"),
             searchInput = $("[data-test-id='search-input']"),
+            visibleElement = $x("//div[contains (@style, 'transition: transform 0.5s')]"),
             alfaOnlyCard = $x("//div[contains(@style,'url(\"https://alfabank.servicecdn.ru/site-upload/c9')]");
 
     public void searchResults() {
@@ -51,7 +52,7 @@ public class MainAlfaPage {
     }
 
     public MainAlfaPage clickOnAlfaOnlyCard() {
-        this.alfaOnlyCard.shouldBe(visible, Duration.ofSeconds(1));
+        this.visibleElement.shouldBe(visible, Duration.ofSeconds(1));
         this.alfaOnlyCard.click();
         return this;
     }
