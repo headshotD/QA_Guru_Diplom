@@ -26,7 +26,7 @@ public class TestBase {
         Configuration.timeout = 5000;
         Configuration.headless =true;
         //Configuration.holdBrowserOpen = true;
-        //Configuration.remote = System.getProperty("browserRemote", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
+        Configuration.remote = System.getProperty("browserRemote", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
