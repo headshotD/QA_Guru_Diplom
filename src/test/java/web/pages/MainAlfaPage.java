@@ -49,7 +49,7 @@ public class MainAlfaPage {
     }
 
     public MainAlfaPage clickOnAlfaOnlyCard() {
-        sleep(1000);
+        sleep(2000);
         this.alfaOnlyCard.click();
         return this;
     }

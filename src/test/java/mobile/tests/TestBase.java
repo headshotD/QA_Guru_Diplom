@@ -5,6 +5,7 @@ import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
+
 import mobile.drivers.BrowserstackDriver;
 import mobile.drivers.EmulationDriver;
 import org.junit.jupiter.api.AfterEach;
@@ -41,12 +42,11 @@ public class TestBase {
     void addAttachments() {
         String deviceHost = System.getProperty("deviceHost", "local");
         String sessionId = Selenide.sessionId().toString();
-        System.out.println("Session ID: " + sessionId);
 
         Attach.pageSource();
-        //if (deviceHost.equals("browserstack")) {
-        //Attach.addVideo(sessionId);
-        // } // выдает 404...
+        if (deviceHost.equals("browserstack")) {
+            Attach.addVideo(sessionId);
+        }
         closeWebDriver();
     }
 }

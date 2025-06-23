@@ -2,16 +2,18 @@ package mobile.drivers;
 
 import com.codeborne.selenide.WebDriverProvider;
 
+import io.appium.java_client.android.AndroidDriver;
 import mobile.config.BrowserstackConfig;
 import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.Capabilities;
-import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 import javax.annotation.Nonnull;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 
 public class BrowserstackDriver implements WebDriverProvider {
 
@@ -20,31 +22,28 @@ public class BrowserstackDriver implements WebDriverProvider {
     @Nonnull
     @Override
     public WebDriver createDriver(@Nonnull Capabilities capabilities) {
-        MutableCapabilities caps = new MutableCapabilities();
+        DesiredCapabilities caps = new DesiredCapabilities();
 
-        caps.setCapability("browserstack.user", config.user());
-        caps.setCapability("browserstack.key", config.key());
-
-        String platform = System.getProperty("platform", "android");
-
-        if (platform.equalsIgnoreCase("ios")) {
-            caps.setCapability("device", config.iosDevice());
-            caps.setCapability("os_version", config.iosOsVersion());
-            caps.setCapability("app", config.app());
-        } else {
-            caps.setCapability("device", config.androidDevice());
-            caps.setCapability("os_version", config.androidOsVersion());
-            caps.setCapability("app", System.getProperty("app", config.app()));
-        }
-
-        caps.setCapability("project", "First Java Project");
-        caps.setCapability("build", "browserstack-build-1");
-        caps.setCapability("name", "first_test");
+        Map<String, Object> bstackOptions = new HashMap<>();
+        bstackOptions.put("userName", config.user());
+        bstackOptions.put("accessKey", config.key());
+        bstackOptions.put("projectName", "ALfa Bank");
+        bstackOptions.put("buildName", "Android Build");
+        bstackOptions.put("sessionName", "Mobile Tests");
+        caps.setCapability("platformName", "android");
+        caps.setCapability("deviceName", config.androidDevice());
+        caps.setCapability("platformVersion", config.androidOsVersion());
+        caps.setCapability("app", config.app());
+        caps.setCapability("bstack:options", bstackOptions);
 
         try {
-            return new RemoteWebDriver(new URL(config.url()), caps);
+            System.out.println("Creating BrowserStack session with capabilities: " + caps);
+            return new AndroidDriver(
+                    new URL("https://hub.browserstack.com/wd/hub"),
+                    caps
+            );
         } catch (MalformedURLException e) {
-            throw new RuntimeException("Invalid Browserstack URL", e);
+            throw new RuntimeException("Failed to create BrowserStack driver", e);
         }
     }
 }

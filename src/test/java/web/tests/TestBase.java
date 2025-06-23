@@ -11,6 +11,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.Map;
 
+import static io.restassured.RestAssured.sessionId;
+
 
 public class TestBase {
 
@@ -42,7 +44,7 @@ public class TestBase {
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
         Attach.browserConsoleLogs();
-        Attach.addVideo();
+        Attach.addVideo(sessionId);
         Selenide.closeWebDriver();
     }
 }
