@@ -7,7 +7,7 @@ import java.net.URL;
 
 @Config.LoadPolicy(Config.LoadType.MERGE)
 @Config.Sources({
-        "classpath:resources/web/key.properties",
+        "classpath:key.properties",
         "classpath:resources/web/local.properties",
         "classpath:resources/web/remote.properties",
 })
