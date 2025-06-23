@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static io.qameta.allure.Allure.step;
-
+@Tag("All")
 @Tag("android_browserstack")
 public class AlfaBankStartScreenTest extends TestBase {
     @BeforeAll

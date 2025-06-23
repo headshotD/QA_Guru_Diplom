@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Test;
 import web.pages.*;
 
 @Tag("AlfaBankWeb")
+@Tag("All")
 public class MainAlfaWebTest extends TestBase {
 
     WebDriverConfig config = ConfigFactory.create(WebDriverConfig.class);
