@@ -7,9 +7,11 @@ import org.aeonbits.owner.Config;
 })
 public interface BrowserstackConfig extends Config {
     @Key("browserstack.user")
+    @DefaultValue("olegn_JPDWZe")
     String user();
 
     @Key("browserstack.key")
+    @DefaultValue("JRwmm3z5xpvFmF9xkj4k")
     String key();
 
     @Key("browserstack.url")
