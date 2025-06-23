@@ -7,9 +7,9 @@ import java.net.URL;
 
 @Config.LoadPolicy(Config.LoadType.MERGE)
 @Config.Sources({
-        "classpath:web/key.properties",
-        "classpath:web/local.properties",
-        "classpath:web/remote.properties",
+        "classpath:resources/web/key.properties",
+        "classpath:resources/web/local.properties",
+        "classpath:resources/web/remote.properties",
 })
 
 public interface WebDriverConfig extends Config {
