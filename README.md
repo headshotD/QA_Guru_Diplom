@@ -101,7 +101,7 @@ ____
 </p>
 
 ____
-## <img alt="Selenoid" height="25" src="media/Selenoid.svg" width="25"/></a> Примеры видео выполнения тестов на Selenoid
+## <img alt="Selenoid" height="25" src="media/Selenoid.svg" width="25"/></a> Примеры видео выполнения тестов в Selenoid и BrowserStack
 ____
 <p align="center">
 <img title="Selenoid Video" src="media/openEnterPage.gif" width="550" height="350"  alt="video">   
