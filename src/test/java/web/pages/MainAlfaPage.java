@@ -5,6 +5,8 @@ import web.config.WebDriverConfig;
 import lombok.Data;
 import org.aeonbits.owner.ConfigFactory;
 
+import java.time.Duration;
+
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
@@ -49,7 +51,7 @@ public class MainAlfaPage {
     }
 
     public MainAlfaPage clickOnAlfaOnlyCard() {
-        this.alfaOnlyCard.shouldBe(visible);
+        this.alfaOnlyCard.shouldBe(visible, Duration.ofSeconds(1));
         this.alfaOnlyCard.click();
         return this;
     }
