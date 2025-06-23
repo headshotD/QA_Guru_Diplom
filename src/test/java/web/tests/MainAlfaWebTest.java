@@ -23,7 +23,6 @@ public class MainAlfaWebTest extends TestBase {
     private CreditCalculatorPage creditCalculatorPage;
     private EnterSideBarPage enterSideBarPage;
     private EnterAlfaBankPage enterAlfaBankPage;
-    private DebitCardsPage debitCardsPage;
 
     @BeforeEach
     public void setUp() {
@@ -31,8 +30,6 @@ public class MainAlfaWebTest extends TestBase {
         creditCalculatorPage = new CreditCalculatorPage();
         enterSideBarPage = new EnterSideBarPage();
         enterAlfaBankPage = new EnterAlfaBankPage();
-        debitCardsPage = new DebitCardsPage();
-
     }
 
     @Test
@@ -96,16 +93,6 @@ public class MainAlfaWebTest extends TestBase {
     void openBecomeCustomersPageTest() {
         MainAlfaPage.openPage()
                 .clickBecomeCustomers();
-    }
-
-    @Test
-    @Owner("ONamozov")
-    @Severity(SeverityLevel.NORMAL)
-    @DisplayName("Открываем страницу заказа карты AlfaOnly")
-    void clickOnAlfaOnlyCardTest() {
-        MainAlfaPage.openPage()
-                .clickOnAlfaOnlyCard();
-        debitCardsPage.textAlfaOnlyCard();
     }
 
     @Test

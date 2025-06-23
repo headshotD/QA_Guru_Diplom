@@ -20,9 +20,6 @@ public interface WebDriverConfig extends Config {
     @Key("expected.calculator.title")
     String creditCalculator();
 
-    @Key("textDebitCardAlfaOnly")
-    String textDebitCardAlfaOnly();
-
     @Key("browser")
     @DefaultValue("chrome")
     String getBrowser();

@@ -27,9 +27,7 @@ public class MainAlfaPage {
             enterSideBar = $("button[data-widget-name='AnalyticsEventSender']"),
             becomeCustomers = $("[data-widget-name='AnalyticsEventSender'][href*='retail/startclient']"),
             searchButtonOnTop = $("[data-test-id='test-ya-button']"),
-            searchInput = $("[data-test-id='search-input']"),
-            visibleElement = $x("//div[contains (@style, 'transition: transform 0.5s')]"),
-            alfaOnlyCard = $x("//div[contains(@style,'url(\"https://alfabank.servicecdn.ru/site-upload/c9')]");
+            searchInput = $("[data-test-id='search-input']");
 
     public void searchResults() {
         switchTo().frame($x("//iframe[@data-test-id='ya-site-search-iframe']"));
@@ -48,12 +46,6 @@ public class MainAlfaPage {
 
     public MainAlfaPage enterTextInSearchInput() {
         this.searchInput.setValue(config.searchText()).pressEnter();
-        return this;
-    }
-
-    public MainAlfaPage clickOnAlfaOnlyCard() {
-        this.visibleElement.shouldBe(visible, Duration.ofSeconds(1));
-        this.alfaOnlyCard.click();
         return this;
     }
 
