@@ -58,8 +58,6 @@ build/
 *.properties
 *.yml
 *.yaml
-!src/test/resources/*
-
 ### Логи тестов ###
 *.log
 logs/
@@ -69,7 +67,6 @@ logs/
 *.csv
 *.json
 *.xml
-!src/test/resources/*
 
 # Кэш IDE
 .attach_pid*
