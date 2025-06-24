@@ -8,6 +8,7 @@
 - Список проверок, реализованных в тестах
 - Запуск тестов в Jenkins и из терминала
 - Allure-отчет
+- Интеграция с Allure-TestOps
 - Уведомление в Telegram о результатах прогона тестов
 - Видео пример прохождения тестов
 
@@ -102,6 +103,15 @@ clean
 
 <p align="center">  
 <img title="Allure Overview Dashboard" src="media/AllureReport.png" width="850">  
+</p>  
+
+## <img alt="Allure" height="25" src="media/Allure.svg" width="25"/></a>  <a name="Allure"></a>Allure Report	</a>
+
+
+## Основная страница отчёта Allure TestOps
+
+<p align="center">  
+<img title="Allure Overview Dashboard" src="media/AllureTestOpsReport.png" width="850">  
 </p>  
 
 ____
