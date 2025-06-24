@@ -21,6 +21,7 @@
 <img width="7%" title="Selenide" src="media/Selenide.svg">
 <img width="7%" title="Selenoid" src="media/Selenoid.svg">
 <img width="7%" title="Allure Report" src="media/Allure.svg">
+<img width="7%" title="Allure TestOps" src="media/Allure_TestOps.svg">
 <img width="7%" title="Gradle" src="media/gradle-svgrepo-com.svg">
 <img width="7%" title="JUnit5" src="media/Junit5.svg">
 <img width="7%" title="GitHub" src="media/github-badge-svgrepo-com.svg">
@@ -105,7 +106,7 @@ clean
 <img title="Allure Overview Dashboard" src="media/AllureReport.png" width="850">  
 </p>  
 
-## <img alt="Allure" height="25" src="media/Allure.svg" width="25"/></a>  <a name="Allure"></a>Allure Report	</a>
+## <img alt="Allure" height="25" src="media/Allure_TestOps.svg" width="25"/></a>  <a name="Allure TestOps"></a>Allure TestOps	</a>
 
 
 ## Основная страница отчёта Allure TestOps
@@ -114,6 +115,10 @@ clean
 <img title="Allure Overview Dashboard" src="media/AllureTestOpsReport.png" width="850">  
 </p>  
 
+## Список тест-кейсов
+<p align="center">  
+<img title="Allure Overview Dashboard" src="media/TestCase.png" width="850">  
+</p>  
 ____
 ## <img alt="Allure" height="25" src="media/Telegram.svg" width="25"/></a> Уведомление в Telegram при помощи бота
 ____
