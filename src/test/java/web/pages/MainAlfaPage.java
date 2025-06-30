@@ -16,6 +16,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class MainAlfaPage {
     WebDriverConfig config = ConfigFactory.create(WebDriverConfig.class);
 
+    @Step("Открываем главную страницу альфа-банка")
     public static MainAlfaPage openPage() {
         open("https://alfabank.ru/");
         return new MainAlfaPage();

@@ -18,16 +18,13 @@ import web.pages.*;
 @DisplayName("Тесты на главной странице альфа-банка")
 public class MainAlfaWebTest extends TestBase {
 
-    WebDriverConfig config = ConfigFactory.create(WebDriverConfig.class);
-
-    private MainAlfaPage mainAlfaPage;
-    private CreditCalculatorPage creditCalculatorPage;
-    private EnterSideBarPage enterSideBarPage;
-    private EnterAlfaBankPage enterAlfaBankPage;
+    EnterAlfaBankPage enterAlfaBankPage = new EnterAlfaBankPage();
+    CreditCalculatorPage creditCalculatorPage = new CreditCalculatorPage();
+    EnterSideBarPage enterSideBarPage = new EnterSideBarPage();
 
     @BeforeEach
     public void setUp() {
-        mainAlfaPage.openPage();
+        MainAlfaPage.openPage();
         creditCalculatorPage = new CreditCalculatorPage();
         enterSideBarPage = new EnterSideBarPage();
         enterAlfaBankPage = new EnterAlfaBankPage();

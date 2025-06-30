@@ -10,6 +10,7 @@ public class EnterSideBarPage {
 
     private final SelenideElement enterInAlfaOnline = $("[href*='web.alfabank.ru'] div[data-test-id='grid']");
 
+    @Step("Наводим на кнопку Войти в Альфа-Онлайн и кликаем")
     public void clickEnterInAlfaOnline() {
         this.enterInAlfaOnline.hover().click();
     }
