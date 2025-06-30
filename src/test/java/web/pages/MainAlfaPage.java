@@ -1,6 +1,7 @@
 package web.pages;
 
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Step;
 import web.config.WebDriverConfig;
 import lombok.Data;
 import org.aeonbits.owner.ConfigFactory;
@@ -29,49 +30,59 @@ public class MainAlfaPage {
             searchButtonOnTop = $("[data-test-id='test-ya-button']"),
             searchInput = $("[data-test-id='search-input']");
 
+    @Step("Переходим в iframe yandex поиска")
     public void searchResults() {
         switchTo().frame($x("//iframe[@data-test-id='ya-site-search-iframe']"));
         $("[class='b-serp-list']").shouldHave(text(config.searchText()));
     }
 
+    @Step("Наводим на раздел Частным лицам")
     public MainAlfaPage hoverPrivatePerson() {
         this.privatePerson.hover();
         return this;
     }
 
+    @Step("Кликаем на иконку лупы")
     public MainAlfaPage clickOnSearchButton() {
         this.searchButtonOnTop.click();
         return this;
     }
 
+    @Step("Вводим текст в поисковую строку и нажимаем Enter")
     public MainAlfaPage enterTextInSearchInput() {
         this.searchInput.setValue(config.searchText()).pressEnter();
         return this;
     }
 
+    @Step("Наводим на подраздел кредиты")
     public MainAlfaPage hoverCredits() {
         this.credits.hover();
         return this;
     }
 
+    @Step("Проверяем заголовок на название Кредиты")
     public void textCredits() {
         credits.shouldHave(text(config.creditTitle()));
     }
 
+    @Step("Кликаем на подзаголовок Кредитный калькулятор")
     public CreditCalculatorPage clickCreditCalculator() {
         creditCalculator.click();
         return new CreditCalculatorPage();
     }
 
+    @Step("Проверяем видимость меню Частным лицам")
     public MainAlfaPage visiblePrivatePersonMenu() {
         this.privatePersonMenu.shouldBe(visible);
         return this;
     }
 
+    @Step("Кликаем на кнопку Войти")
     public void clickEnterSideBar() {
         this.enterSideBar.click();
     }
 
+    @Step("Кликаем на кнопку Стать Клиентом")
     public void clickBecomeCustomers() {
         this.becomeCustomers.click();
     }
