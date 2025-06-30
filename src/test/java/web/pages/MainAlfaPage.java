@@ -6,8 +6,6 @@ import web.config.WebDriverConfig;
 import lombok.Data;
 import org.aeonbits.owner.ConfigFactory;
 
-import java.time.Duration;
-
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
@@ -84,8 +82,9 @@ public class MainAlfaPage {
     }
 
     @Step("Кликаем на кнопку Стать Клиентом")
-    public void clickBecomeCustomers() {
+    public MainAlfaPage clickBecomeCustomers() {
         this.becomeCustomers.click();
+        return this;
     }
 
 }

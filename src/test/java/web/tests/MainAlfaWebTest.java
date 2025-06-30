@@ -4,8 +4,6 @@ import io.qameta.allure.Epic;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
-import web.config.WebDriverConfig;
-import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -21,6 +19,7 @@ public class MainAlfaWebTest extends TestBase {
     EnterAlfaBankPage enterAlfaBankPage = new EnterAlfaBankPage();
     CreditCalculatorPage creditCalculatorPage = new CreditCalculatorPage();
     EnterSideBarPage enterSideBarPage = new EnterSideBarPage();
+    BecomeCustomers becomeCustomers = new BecomeCustomers();
 
     @BeforeEach
     public void setUp() {
@@ -59,7 +58,31 @@ public class MainAlfaWebTest extends TestBase {
                 .hoverPrivatePerson()
                 .hoverCredits()
                 .clickCreditCalculator();
-        creditCalculatorPage.checkTitleCreditCalculatorTextTest();
+        creditCalculatorPage.verifyCalculatorTitle();
+    }
+
+    @Test
+    @Owner("ONamozov")
+    @Severity(SeverityLevel.CRITICAL)
+    @DisplayName("Проверяем максимальную сумму кредита на странице Кредитный калькулятор")
+    void openCreditsCalculatorAndCheckMaxSumTest() {
+        MainAlfaPage.openPage()
+                .hoverPrivatePerson()
+                .hoverCredits()
+                .clickCreditCalculator();
+        creditCalculatorPage.verifyMaxAmount();
+    }
+
+    @Test
+    @Owner("ONamozov")
+    @Severity(SeverityLevel.CRITICAL)
+    @DisplayName("Проверяем отображения текста Госуслуги или справка о доходах если сумма кредита больше 300.000")
+    void openCreditsCalculatorAndCheckGosUslugiTextTest() {
+        MainAlfaPage.openPage()
+                .hoverPrivatePerson()
+                .hoverCredits()
+                .clickCreditCalculator();
+        creditCalculatorPage.verifyRequiredDocuments();
     }
 
     @Test
@@ -76,7 +99,7 @@ public class MainAlfaWebTest extends TestBase {
     @Test
     @Owner("ONamozov")
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Открываем страницу \"Войти\" и выбираем \"Войти в Альфа-онлайн\"")
+    @DisplayName("Открываем страницу \"Войти\" и выбираем \"Войти в Альфа-онлайн\", проверяем, что открылась страница входа")
     void openEnterSideBarAndClickOnAlfaOnlineTest() {
         MainAlfaPage.openPage()
                 .clickEnterSideBar();
@@ -87,10 +110,23 @@ public class MainAlfaWebTest extends TestBase {
     @Test
     @Owner("ONamozov")
     @Severity(SeverityLevel.CRITICAL)
+    @DisplayName("Проверяем маску телефона на странице \"Войти в Альфа-онлайн\"")
+    void checkMaskPhoneAtAlfaOnlinePageTest() {
+        MainAlfaPage.openPage()
+                .clickEnterSideBar();
+        enterSideBarPage.clickEnterInAlfaOnline();
+        enterAlfaBankPage.checkMaskPhone();
+    }
+
+    @Test
+    @Owner("ONamozov")
+    @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Открываем страницу \"Стать клиентом\"")
     void openBecomeCustomersPageTest() {
         MainAlfaPage.openPage()
                 .clickBecomeCustomers();
+        becomeCustomers.checkTextOnBecomeCustomersPage();
+
     }
 
     @Test
