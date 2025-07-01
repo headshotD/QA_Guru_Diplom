@@ -133,8 +133,7 @@ clean
 
 <p align="center">  
 <a href="https://allure.autotests.cloud/project/4783/test-cases?treeId=0"> <img title="Allure Overview Dashboard" src="media/TestCase.png" width="850">  
-</p>  
-____
+</p>
 
 ## <img alt="Allure" height="25" src="media/Telegram.svg" width="25"/></a> Уведомление в Telegram при помощи бота
 ____
@@ -158,7 +157,6 @@ ____
 <p align="center">
 <img title="Selenoid Video" src="media/hoverAndCredit.gif" width="550" height="350"  alt="video">   
 </p>
-____
 
 ## <img alt="Selenoid" height="25" src="media/Browserstack.svg" width="25"/></a> Примеры видео выполнения мобильных тестов в BrowserStack
 
