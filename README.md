@@ -16,12 +16,12 @@
 ## :ballot_box_with_check:Технологии и инструменты:
 
 <p align="center">
-<a href="https://www.jetbrains.com/idea/ "><img width="7%" title="IntelliJ IDEA" src="media/intellij-idea-svgrepo-com.svg">
-<a href="https://www.java.com/ru/ "><img width="7%" title="Java" src="media/java-svgrepo-com.svg">
-<a href="https://selenide.org/ "><img width="7%" title="Selenide" src="media/Selenide.svg">
-<a href="https://aerokube.com/selenoid/ "><img width="7%" title="Selenoid" src="media/Selenoid.svg">
-<a href="https://github.com/allure-framework/ "><img width="7%" title="Allure Report" src="media/Allure.svg">
-<a href="https://qameta.io/ "><img width="7%" title="Allure TestOps" src="media/Allure_TestOps.svg">
+<a href="https://www.jetbrains.com/idea/"><img width="7%" title="IntelliJ IDEA" src="media/intellij-idea-svgrepo-com.svg">
+<a href="https://www.java.com/ru/"> <img width="7%" title="Java" src="media/java-svgrepo-com.svg">
+<a href="https://selenide.org/"> <img width="7%" title="Selenide" src="media/Selenide.svg">
+<a href="https://aerokube.com/selenoid/"> <img width="7%" title="Selenoid" src="media/Selenoid.svg">
+<a href="https://github.com/allure-framework/"><img width="7%" title="Allure Report" src="media/Allure.svg">
+<a href="https://qameta.io/"><img width="7%" title="Allure TestOps" src="media/Allure_TestOps.svg">
 <img width="7%" title="Gradle" src="media/gradle-svgrepo-com.svg">
 <img width="7%" title="JUnit5" src="media/Junit5.svg">
 <img width="7%" title="GitHub" src="media/github-badge-svgrepo-com.svg">
