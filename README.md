@@ -6,7 +6,7 @@
 - [Технологии и инструменты](#технологии-и-инструменты)
 - [Реализованные Web проверки](#реализованные-web-проверки)
 - [Реализованные mobile Android проверки](#реализованные-mobile-android-проверки)
-- [Сборка в Jenkins](#img-altjenkins-height25-srcmediajenkinssvg-width25-сборка-в-jenkins)
+- [Сборка в Jenkins](#build-jenkins)
 - [Параметры сборки в Jenkins](#параметры-сборки-в-jenkins)
 - [Команды для запуска тестов](#команда-для-запуска-из-терминала)
 - [Allure Report](#allure-report)
@@ -59,6 +59,7 @@
 - Проверка ввода некорректного иностранного телефона и отображения ошибки,
 - Проверка ввода корректного номера и успешный вход.
 
+<a id="build-jenkins"></a>
 ##  <img alt="Jenkins" height="25" src="media/Jenkins.svg" width="25"/> Сборка в [Jenkins](https://jenkins.autotests.cloud/job/ONamozov_diplom_34/)
 
 <p align="center">
@@ -115,17 +116,18 @@ clean
 -DbrowserVersion="${BROWSER_VERSION}"
 -DbrowserRemote="https://login:password@${BROWSER_REMOTE}/wd/hub"
 ```
-
-## <img alt="Allure" height="25" src="media/Allure.svg" width="25"/></a>  <a name="Allure"></a>Allure Report    </a>
 <a id="allure-report"></a>
+## <img alt="Allure" height="25" src="media/Allure.svg" width="25"/></a>  <a name="Allure"></a>Allure Report    </a>
+
 ## Основная страница отчёта
 
 <p align="center">  
 <a href="https://jenkins.autotests.cloud/job/ONamozov_diplom_34"> <img title="Allure Overview Dashboard" src="media/AllureReport.png" width="850">  
 </p>  
 
-## <img alt="Allure" height="25" src="media/Allure_TestOps.svg" width="25"/></a>  <a name="Allure TestOps"></a>Allure TestOps    </a>
 <a id="allure-testops"></a>
+## <img alt="Allure" height="25" src="media/Allure_TestOps.svg" width="25"/></a>  <a name="Allure TestOps"></a>Allure TestOps    </a>
+
 ## Основная страница отчёта Allure TestOps
 
 <p align="center">  
@@ -137,8 +139,8 @@ clean
 <p align="center">  
 <a href="https://allure.autotests.cloud/project/4783/test-cases?treeId=0"> <img title="Allure Overview Dashboard" src="media/TestCase.png" width="850">  
 </p>
-<a id="telegram"></a>
 
+<a id="telegram"></a>
 ## <img alt="Allure" height="25" src="media/Telegram.svg" width="25"/></a> Уведомление в Telegram при помощи бота
 
 ____
