@@ -1,4 +1,3 @@
-
 <a href="https://alfabank.ru/ "> <img src="media/Alfa-Bank.svg" width="350" height="200"> 
 <h1 >Проект по автоматизации тестирования для компании <a href="https://alfabank.ru/ "> Альфа-банк</a></h1> 
 
@@ -13,6 +12,7 @@
 - Видео пример прохождения тестов
 
 <a id="tools"></a>
+
 ## :ballot_box_with_check:Технологии и инструменты:
 
 <p align="center">
@@ -20,15 +20,15 @@
 <a href="https://www.java.com/ru/"> <img width="7%" title="Java" src="media/java-svgrepo-com.svg">
 <a href="https://selenide.org/"> <img width="7%" title="Selenide" src="media/Selenide.svg">
 <a href="https://aerokube.com/selenoid/"> <img width="7%" title="Selenoid" src="media/Selenoid.svg">
-<a href="https://github.com/allure-framework/"><img width="7%" title="Allure Report" src="media/Allure.svg">
-<a href="https://qameta.io/"><img width="7%" title="Allure TestOps" src="media/Allure_TestOps.svg">
-<img width="7%" title="Gradle" src="media/gradle-svgrepo-com.svg">
-<img width="7%" title="JUnit5" src="media/Junit5.svg">
-<img width="7%" title="GitHub" src="media/github-badge-svgrepo-com.svg">
-<img width="7%" title="Jenkins" src="media/Jenkins.svg">
-<img width="7%" title="Telegram" src="media/Telegram.svg">
-<img width="7%" title="Appium" src="media/appium.svg">
-<img width="7%" title="AndroidStudio" src="media/androidstudio.svg">
+<a href="https://github.com/allure-framework/"> <img width="7%" title="Allure Report" src="media/Allure.svg">
+<a href="https://qameta.io/"> <img width="7%" title="Allure TestOps" src="media/Allure_TestOps.svg">
+<a href="https://gradle.org/"> <img width="7%" title="Gradle" src="media/gradle-svgrepo-com.svg">
+<a href="https://junit.org/"> <img width="7%" title="JUnit5" src="media/Junit5.svg">
+<a href="https://github.com/"> <img width="7%" title="GitHub" src="media/github-badge-svgrepo-com.svg">
+<a href="https://www.jenkins.io/"> <img width="7%" title="Jenkins" src="media/Jenkins.svg">
+<a href="https://telegram.org/"> <img width="7%" title="Telegram" src="media/Telegram.svg">
+<a href="https://appium.io/docs/en/latest/"> <img width="7%" title="Appium" src="media/appium.svg">
+<a href="https://developer.android.com/studio"> <img width="7%" title="AndroidStudio" src="media/androidstudio.svg">
 </p>
 <a id="cases"></a>
 
@@ -53,41 +53,51 @@
 
 ## <img alt="Jenkins" height="25" src="media/Jenkins.svg" width="25"/> Сборка в [Jenkins](https://jenkins.autotests.cloud/job/ONamozov_diplom_34/)
 
-
 <p align="center">  
 <img src="media/JenkinsBuild.png" alt="Jenkins" width="950"/></a>  
 </p>
 
-
 ## :ballot_box_with_check: Параметры сборки в Jenkins:
+
 - Tag (Уникальный тэг тестов)
 - browser (браузер, по умолчанию chrome)
 - browserVersion (версия браузера, по умолчанию 127.0)
 - browserSize (размер окна браузера, по умолчанию 1920x1080)
 
-
 ## Команда для запуска из терминала
+
 Локальный запуск mobile Android тестов
+
 ```bash
 gradle clean AlfaBankAndroidEmulation
 ```
+
 Удаленный запуск mobile Android тестов
+
 ```bash
 gradle clean android_browserstack
 ```
+
 Локальный запуск для запуска Web тестов
+
 ```bash
 gradle clean AlfaBankWeb
 ```
+
 Локальный запуск всех тестов
+
 ```bash
 gradle clean AllTests
 ```
+
 Запуск с параметрами Web тестов:
+
 ```bash  
 gradle clean AlfaBankWeb -Dbrowser=chrome -DbrowserSize=1920x1080 -DbrowserVersion=128.0
 ```
+
 Удаленный запуск через Jenkins:
+
 ```bash  
 clean
 "${TAG}"
@@ -97,8 +107,7 @@ clean
 -DbrowserRemote="https://user1:1234@${BROWSER_REMOTE}/wd/hub"
 ```
 
-## <img alt="Allure" height="25" src="media/Allure.svg" width="25"/></a>  <a name="Allure"></a>Allure Report	</a>
-
+## <img alt="Allure" height="25" src="media/Allure.svg" width="25"/></a>  <a name="Allure"></a>Allure Report    </a>
 
 ## Основная страница отчёта
 
@@ -106,8 +115,7 @@ clean
 <img title="Allure Overview Dashboard" src="media/AllureReport.png" width="850">  
 </p>  
 
-## <img alt="Allure" height="25" src="media/Allure_TestOps.svg" width="25"/></a>  <a name="Allure TestOps"></a>Allure TestOps	</a>
-
+## <img alt="Allure" height="25" src="media/Allure_TestOps.svg" width="25"/></a>  <a name="Allure TestOps"></a>Allure TestOps    </a>
 
 ## Основная страница отчёта Allure TestOps
 
@@ -116,6 +124,7 @@ clean
 </p>  
 
 ## Список тест-кейсов
+
 <p align="center">  
 <img title="Allure Overview Dashboard" src="media/TestCase.png" width="850">  
 </p>  
@@ -127,7 +136,9 @@ ____
 </p>
 
 ____
+
 ## <img alt="Selenoid" height="25" src="media/Selenoid.svg" width="25"/></a> Примеры видео выполнения тестов в Selenoid и BrowserStack
+
 ____
 <p align="center">
 <img title="Selenoid Video" src="media/openEnterPage.gif" width="550" height="350"  alt="video">   
