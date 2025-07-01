@@ -19,7 +19,6 @@ public class TestBase {
     @BeforeAll
     static void beforeAll() {
         String deviceHost = System.getProperty("deviceHost", "local");
-
         if (deviceHost.equals("browserstack")) {
             Configuration.browser = BrowserstackDriver.class.getName();
         } else {

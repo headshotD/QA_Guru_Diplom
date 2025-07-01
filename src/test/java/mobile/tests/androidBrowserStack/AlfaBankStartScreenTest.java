@@ -21,6 +21,7 @@ import static io.qameta.allure.Allure.step;
 @Tag("android_browserstack")
 @Epic("Экран входа в приложении")
 @DisplayName("Тесты на стартовом экране приложения альфа-банка")
+@Owner("ONamozov")
 public class AlfaBankStartScreenTest extends TestBase {
     @BeforeAll
     static void setup() {
@@ -28,8 +29,8 @@ public class AlfaBankStartScreenTest extends TestBase {
     }
 
     @Test
-    @Owner("ONamozov")
     @Severity(SeverityLevel.NORMAL)
+    @DisplayName("Проверка тайтла на экране входа")
     void checkTitleOnWelcomeScreenTest() {
         step("Проверка тайтла на экране входа", () -> {
             $(By.id("ru.alfabank.mobile.android:id/text_view_component_title_view"))
@@ -38,20 +39,22 @@ public class AlfaBankStartScreenTest extends TestBase {
     }
 
     @Test
-    @Owner("ONamozov")
     @Severity(SeverityLevel.TRIVIAL)
+    @DisplayName("Проверка, что кнопка зайти задизейблена если поле ввода не заполнено")
     void checkClickableFalseOnEnterButtonTest() {
-        step("Проверка, что кнопка зайти задизейблена если поле ввода не заполнено", () -> {
+        step("Вводим в инпут поле +7", () -> {
             $(By.id("ru.alfabank.mobile.android:id/text_field_input"))
                     .sendKeys("+7");
+        });
+        step("Проверяем, что кнопка Зайти задизейблена", () -> {
             $(By.id("ru.alfabank.mobile.android:id/button_text"))
                     .shouldHave(Condition.attribute("clickable", "false"));
         });
     }
 
     @Test
-    @Owner("ONamozov")
     @Severity(SeverityLevel.NORMAL)
+    @DisplayName("Проверка, что у кнопки входа текст Зайти")
     void checkShouldHaveButtonEnterTest() {
         step("Проверка, что у кнопки входа текст Зайти", () -> {
             $(By.id("ru.alfabank.mobile.android:id/button_text"))
@@ -60,46 +63,50 @@ public class AlfaBankStartScreenTest extends TestBase {
     }
 
     @Test
-    @Owner("ONamozov")
     @Severity(SeverityLevel.NORMAL)
+    @DisplayName("Проверка ввода некорректного РФ телефона")
     public void checkBadHuntWithBadRuNumberTest() {
-        step("Проверка ввода некорректного телефона", () -> {
-            $(By.id("ru.alfabank.mobile.android:id/text_view_component_title_view"))
-                    .shouldHave(text("Привет! Введите телефон и заходите скорее"));
+        step("Вводим некорректный РФ телефон", () -> {
             $(By.id("ru.alfabank.mobile.android:id/text_field_input"))
                     .sendKeys("+71111111111");
+        });
+        step("Проверяем текст ошибки на некорректный номер телефона", () -> {
             $(By.id("ru.alfabank.mobile.android:id/text_field_hint"))
                     .shouldHave(text("Некорректный номер телефона"));
         });
     }
 
     @Test
-    @Owner("ONamozov")
     @Severity(SeverityLevel.NORMAL)
+    @DisplayName("Проверка ввода иностранного телефона")
     public void checkBadHuntWithInoNumberTest() {
-        step("Проверка ввода некорректного иностранного телефона", () -> {
-            $(By.id("ru.alfabank.mobile.android:id/text_view_component_title_view"))
-                    .shouldHave(text("Привет! Введите телефон и заходите скорее"));
+        step("Вводим некорректный номер телефона", () -> {
             $(By.id("ru.alfabank.mobile.android:id/text_field_input"))
                     .sendKeys("12312321321");
+        });
+        step("Кликаем на кнопку Зайти", () -> {
             $(By.id("ru.alfabank.mobile.android:id/button_container"))
                     .click();
+        });
+        step("Проверяем текст ошибки", () -> {
             $(By.id("ru.alfabank.mobile.android:id/text_field_hint"))
                     .shouldHave(text("Кажется, это иностранный номер. Введите номер российского оператора"));
         });
     }
 
     @Test
-    @Owner("ONamozov")
     @Severity(SeverityLevel.NORMAL)
+    @DisplayName("Проверка ввода корректного номера")
     public void checkSuccessfulNumberTest() {
-        step("Проверка ввода корректного номера", () -> {
-            $(By.id("ru.alfabank.mobile.android:id/text_view_component_title_view"))
-                    .shouldHave(text("Привет! Введите телефон и заходите скорее"));
+        step("Вводим корректный номер телефона", () -> {
             $(By.id("ru.alfabank.mobile.android:id/text_field_input"))
                     .sendKeys("+79991112233");
+        });
+        step("Кликаем на кнопку Зайти", () -> {
             $(By.id("ru.alfabank.mobile.android:id/button_container"))
                     .click();
+        });
+        step("Проверяем, что тулбар виден", () -> {
             $(By.id("ru.alfabank.mobile.android:id/toolbar"))
                     .shouldHave(visible);
         });
