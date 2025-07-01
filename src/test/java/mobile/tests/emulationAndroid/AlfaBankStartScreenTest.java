@@ -74,10 +74,14 @@ public class AlfaBankStartScreenTest extends TestBase {
         step("Проверка ввода некорректного иностранного телефона", () -> {
             $(By.id("ru.alfabank.mobile.android:id/text_field_input"))
                     .sendKeys("12312321321");
-            $(By.id("ru.alfabank.mobile.android:id/button_container"))
-                    .click();
-            $(By.id("ru.alfabank.mobile.android:id/text_field_hint"))
-                    .shouldHave(text("Кажется, это иностранный номер. Введите номер российского оператора"));
+            step("Кликаем на кнопку Зайти", () -> {
+                $(By.id("ru.alfabank.mobile.android:id/button_container"))
+                        .click();
+            });
+            step("Проверяем текст ошибки", () -> {
+                $(By.id("ru.alfabank.mobile.android:id/text_field_hint"))
+                        .shouldHave(text("Кажется, это иностранный номер. Введите номер российского оператора"));
+            });
         });
     }
 
