@@ -6,18 +6,18 @@
 - [Технологии и инструменты](#технологии-и-инструменты)
 - [Реализованные Web проверки](#реализованные-web-проверки)
 - [Реализованные mobile Android проверки](#реализованные-mobile-android-проверки)
-- [Сборка в Jenkins](#сборка-в-jenkins)
+- [Сборка в Jenkins](#img-altjenkins-height25-srcmediajenkinssvg-width25-сборка-в-jenkins)
 - [Параметры сборки в Jenkins](#параметры-сборки-в-jenkins)
 - [Команды для запуска тестов](#команда-для-запуска-из-терминала)
-- [Allure Report](#allure-report)
-- [Allure TestOps](#allure-testops)
-- [Уведомление в Telegram](#уведомление-в-telegram-при-помощи-бота)
-- [Примеры видео выполнения web тестов](#примеры-видео-выполнения-web-тестов-в-selenoid)
-- [Примеры видео выполнения мобильных тестов](#примеры-видео-выполнения-мобильных-тестов-в-browserstack)
+- [Allure Report](#img-altallure-height25-srcmediaalluresvg-width25a-a-nameallureaallure-report-a)
+- [Allure TestOps](#img-altallure-height25-srcmediaallure_testopssvg-width25a-a-nameallure-testopsaallure-testops-a)
+- [Уведомление в Telegram](#img-altallure-height25-srcmediatelegramsvg-width25a-уведомление-в-telegram-при-помощи-бота)
+- [Примеры видео выполнения web тестов](#img-altselenoid-height25-srcmediaselenoidsvg-width25a-примеры-видео-выполнения-web-тестов-в-selenoid)
+- [Примеры видео выполнения мобильных тестов](#img-altselenoid-height25-srcmediabrowserstacksvg-width25a-примеры-видео-выполнения-мобильных-тестов-в-browserstack)
 
 <a id="tools"></a>
 
-## :ballot_box_with_check:Технологии и инструменты:
+## Технологии и инструменты:
 
 <p align="center">
 <a href="https://www.jetbrains.com/idea/"><img width="7%" title="IntelliJ IDEA" src="media/intellij-idea-svgrepo-com.svg">
@@ -37,7 +37,7 @@
 </p>
 <a id="cases"></a>
 
-## :ballot_box_with_check: Реализованные Web проверки:
+## Реализованные Web проверки:
 
 - Проверка, что при наведении на меню "Частным лицам" открывается меню,
 - Проверка наличия пункта "Кредиты" в меню,
@@ -50,7 +50,7 @@
 - Проверяем отображения текста Госуслуги или справка о доходах если сумма кредита больше 300.000,
 - Проверяем маску телефона на странице "Войти в Альфа-онлайн".
 
-## :ballot_box_with_check: Реализованные mobile Android проверки:
+## Реализованные mobile Android проверки:
 
 - Проверка тайтла на экране входа,
 - Проверка, что кнопка зайти задизейблена если поле ввода не заполнено,
@@ -66,7 +66,7 @@
 </p>
 
 
-## :ballot_box_with_check: Параметры сборки в Jenkins:
+## Параметры сборки в Jenkins:
 
 - Tag (Уникальный тэг тестов)
 - browser (браузер, по умолчанию chrome)
