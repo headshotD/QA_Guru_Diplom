@@ -4,7 +4,6 @@ import io.qameta.allure.Epic;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -20,14 +19,6 @@ public class MainAlfaWebTest extends TestBase {
     CreditCalculatorPage creditCalculatorPage = new CreditCalculatorPage();
     EnterSideBarPage enterSideBarPage = new EnterSideBarPage();
     BecomeCustomers becomeCustomers = new BecomeCustomers();
-
-    @BeforeEach
-    public void setUp() {
-        MainAlfaPage.openPage();
-        creditCalculatorPage = new CreditCalculatorPage();
-        enterSideBarPage = new EnterSideBarPage();
-        enterAlfaBankPage = new EnterAlfaBankPage();
-    }
 
     @Test
     @Owner("ONamozov")
