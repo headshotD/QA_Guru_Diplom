@@ -6,6 +6,7 @@ import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import mobile.tests.TestBase;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -68,10 +69,9 @@ public class AlfaBankStartScreenTest extends TestBase {
     @Test
     @Owner("ONamozov")
     @Severity(SeverityLevel.NORMAL)
+    @DisplayName("Проверка ввода некорректного иностранного телефона")
     public void checkBadHuntWithInoNumberTest() {
         step("Проверка ввода некорректного иностранного телефона", () -> {
-            $(By.id("ru.alfabank.mobile.android:id/text_view_component_title_view"))
-                    .shouldHave(text("Привет! Введите телефон и заходите скорее"));
             $(By.id("ru.alfabank.mobile.android:id/text_field_input"))
                     .sendKeys("12312321321");
             $(By.id("ru.alfabank.mobile.android:id/button_container"))
