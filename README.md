@@ -12,7 +12,7 @@
 - [Allure Report](#img-altallure-height25-srcmediaalluresvg-width25a-a-nameallureaallure-report-a)
 - [Allure TestOps](#img-altallure-height25-srcmediaallure_testopssvg-width25a-a-nameallure-testopsaallure-testops-a)
 - [Уведомление в Telegram](#img-altallure-height25-srcmediatelegramsvg-width25a-уведомление-в-telegram-при-помощи-бота)
-- [Примеры видео выполнения web тестов](#img-altselenoid-height25-srcmediaselenoidsvg-width25a-примеры-видео-выполнения-web-тестов-в-selenoid)
+- [Примеры видео выполнения web тестов](#web-video)
 - [Примеры видео выполнения мобильных тестов](#browserstack-video-examples)
 
 <a id="tools"></a>
@@ -146,7 +146,7 @@ ____
 </p>
 
 ____
-
+<a id="web-video"></a>
 ## <img alt="Selenoid" height="25" src="media/Selenoid.svg" width="25"/></a> Примеры видео выполнения web тестов в Selenoid
 
 ____
