@@ -11,6 +11,7 @@ import web.pages.*;
 
 @Tag("AlfaBankWeb")
 @Tag("All")
+@Owner("ONamozov")
 @Epic("Главная страница в альфа-банке")
 @DisplayName("Тесты на главной странице альфа-банка")
 public class MainAlfaWebTest extends TestBase {
@@ -21,7 +22,6 @@ public class MainAlfaWebTest extends TestBase {
     BecomeCustomers becomeCustomers = new BecomeCustomers();
 
     @Test
-    @Owner("ONamozov")
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Проверяем, что при наведении на меню \"Частным лицам\"открывается меню")
     void openMenuWithHoverInPrivatePersonTest() {
@@ -31,7 +31,6 @@ public class MainAlfaWebTest extends TestBase {
     }
 
     @Test
-    @Owner("ONamozov")
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Проверка наличия пункта \"Кредиты\" в меню")
     void openMenuWithHoverAndCheckCreditTextTest() {
@@ -41,7 +40,6 @@ public class MainAlfaWebTest extends TestBase {
     }
 
     @Test
-    @Owner("ONamozov")
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Открываем страницу кредитный калькулятор")
     void openCreditsCalculatorPageTest() {
@@ -53,7 +51,6 @@ public class MainAlfaWebTest extends TestBase {
     }
 
     @Test
-    @Owner("ONamozov")
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Проверяем максимальную сумму кредита на странице Кредитный калькулятор")
     void openCreditsCalculatorAndCheckMaxSumTest() {
@@ -65,7 +62,6 @@ public class MainAlfaWebTest extends TestBase {
     }
 
     @Test
-    @Owner("ONamozov")
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Проверяем отображения текста Госуслуги или справка о доходах если сумма кредита больше 300.000")
     void openCreditsCalculatorAndCheckGosUslugiTextTest() {
@@ -77,7 +73,6 @@ public class MainAlfaWebTest extends TestBase {
     }
 
     @Test
-    @Owner("ONamozov")
     @Severity(SeverityLevel.NORMAL)
     @DisplayName("Открываем страницу \"Войти\"")
     void openEnterSideBarTest() {
@@ -88,7 +83,6 @@ public class MainAlfaWebTest extends TestBase {
     }
 
     @Test
-    @Owner("ONamozov")
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Открываем страницу \"Войти\" и выбираем \"Войти в Альфа-онлайн\", проверяем, что открылась страница входа")
     void openEnterSideBarAndClickOnAlfaOnlineTest() {
@@ -99,7 +93,6 @@ public class MainAlfaWebTest extends TestBase {
     }
 
     @Test
-    @Owner("ONamozov")
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Проверяем маску телефона на странице \"Войти в Альфа-онлайн\"")
     void checkMaskPhoneAtAlfaOnlinePageTest() {
@@ -110,7 +103,6 @@ public class MainAlfaWebTest extends TestBase {
     }
 
     @Test
-    @Owner("ONamozov")
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Открываем страницу \"Стать клиентом\"")
     void openBecomeCustomersPageTest() {
@@ -121,7 +113,6 @@ public class MainAlfaWebTest extends TestBase {
     }
 
     @Test
-    @Owner("ONamozov")
     @Severity(SeverityLevel.MINOR)
     @DisplayName("Открываем виджет поиска и проверяем, что нашлось значение qa.guru")
     void searchOnTopWidgetTest() {

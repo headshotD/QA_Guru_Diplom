@@ -16,9 +16,8 @@ public class EnterSideBarPage {
     }
 
     @Step("Проверяем видимость элемента в сайдбаре")
-    public EnterSideBarPage checkVisibleEnterSideBar() {
+    public void checkVisibleEnterSideBar() {
         enterInAlfaOnline.shouldHave(visible);
-        return new EnterSideBarPage();
     }
 
 

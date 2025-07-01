@@ -12,8 +12,7 @@ public class BecomeCustomers {
     private final SelenideElement layout = $("[data-widget-name='Layout']");
 
     @Step("Ищем текст Дебетовая карта Alfa Only на всей странице")
-    public BecomeCustomers checkTextOnBecomeCustomersPage() {
+    public void checkTextOnBecomeCustomersPage() {
         layout.shouldHave(text(textAlfaOnly));
-        return new BecomeCustomers();
     }
 }

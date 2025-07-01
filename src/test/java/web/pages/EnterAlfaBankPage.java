@@ -14,9 +14,8 @@ public class EnterAlfaBankPage {
     private final SelenideElement phoneInputLine = $("[data-test-id='phoneInput']");
 
     @Step("Проверяем видимость поля ввода телефона")
-    public EnterAlfaBankPage visiblePhoneInputLine() {
+    public void visiblePhoneInputLine() {
         phoneInputLine.shouldHave(visible);
-        return new EnterAlfaBankPage();
     }
 
     @Step("Проверяем маску телефона и автоматическое добавление +7")

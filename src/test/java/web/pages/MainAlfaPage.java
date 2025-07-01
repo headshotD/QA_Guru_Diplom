@@ -71,9 +71,8 @@ public class MainAlfaPage {
     }
 
     @Step("Проверяем видимость меню Частным лицам")
-    public MainAlfaPage visiblePrivatePersonMenu() {
+    public void visiblePrivatePersonMenu() {
         this.privatePersonMenu.shouldBe(visible);
-        return this;
     }
 
     @Step("Кликаем на кнопку Войти")
@@ -82,9 +81,8 @@ public class MainAlfaPage {
     }
 
     @Step("Кликаем на кнопку Стать Клиентом")
-    public MainAlfaPage clickBecomeCustomers() {
+    public void clickBecomeCustomers() {
         this.becomeCustomers.click();
-        return this;
     }
 
 }

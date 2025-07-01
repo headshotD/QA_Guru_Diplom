@@ -21,21 +21,18 @@ public class CreditCalculatorPage {
     private final SelenideElement requiredSecondDocs = $("[data-test-id='second-documents']");
 
     @Step("Проверяем заголовок калькулятора")
-    public CreditCalculatorPage verifyCalculatorTitle() {
+    public void verifyCalculatorTitle() {
         creditCalculatorHeaderText.shouldHave(text(config.creditCalculator()));
-        return this;
     }
 
     @Step("Проверяем максимальное значение суммы кредита (30 000 000 ₽)")
-    public CreditCalculatorPage verifyMaxAmount() {
+    public void verifyMaxAmount() {
         amountInput.setValue(maxAmountTest).pressTab();
         amountInput.shouldHave(value(maxAmount));
-        return this;
     }
 
     @Step("Проверяем список необходимых документов")
-    public CreditCalculatorPage verifyRequiredDocuments() {
+    public void verifyRequiredDocuments() {
         requiredSecondDocs.shouldHave(text(GosUslugi));
-        return this;
     }
 }

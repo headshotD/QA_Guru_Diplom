@@ -18,6 +18,8 @@ import static io.qameta.allure.Allure.step;
 
 @Tag("AlfaBankAndroidEmulation")
 @Epic("Экран входа в приложении")
+@Owner("ONamozov")
+@DisplayName("Тесты на стартовом экране приложения альфа-банка")
 public class AlfaBankStartScreenTest extends TestBase {
 
     @Test
