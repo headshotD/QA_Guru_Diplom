@@ -35,12 +35,15 @@
 ## :ballot_box_with_check: Реализованные Web проверки:
 
 - Проверка, что при наведении на меню "Частным лицам" открывается меню,
-- Проверка наличия пункта "Кредиты" в меню",
+- Проверка наличия пункта "Кредиты" в меню,
 - Проверка открытия страницы кредитный калькулятор,
 - Проверка открытия страницы входа в личный кабинет,
 - Проверка открытия страницы "Войти" и выбираем "Войти в Альфа-онлайн"
 - Проверка открытия страницы "Стать клиентом",
-- Открываем виджет поиска и проверяем, что нашлось значение qa.guru.
+- Открываем виджет поиска и проверяем, что нашлось значение qa.guru,
+- Проверяем максимальную сумму кредита на странице Кредитный калькулятор
+- Проверяем отображения текста Госуслуги или справка о доходах если сумма кредита больше 300.000,
+- Проверяем маску телефона на странице "Войти в Альфа-онлайн".
 
 ## :ballot_box_with_check: Реализованные mobile Android проверки:
 
@@ -54,7 +57,9 @@
 ## <img alt="Jenkins" height="25" src="media/Jenkins.svg" width="25"/> Сборка в [Jenkins](https://jenkins.autotests.cloud/job/ONamozov_diplom_34/)
 
 <p align="center">  
+
 <img src="media/JenkinsBuild.png" alt="Jenkins" width="950"/></a>  
+
 </p>
 
 ## :ballot_box_with_check: Параметры сборки в Jenkins:
@@ -104,7 +109,7 @@ clean
 -Dbrowser="${BROWSER}"
 -DbrowserSize="${BROWSER_SIZE}"
 -DbrowserVersion="${BROWSER_VERSION}"
--DbrowserRemote="https://user1:1234@${BROWSER_REMOTE}/wd/hub"
+-DbrowserRemote="https://login:password@${BROWSER_REMOTE}/wd/hub"
 ```
 
 ## <img alt="Allure" height="25" src="media/Allure.svg" width="25"/></a>  <a name="Allure"></a>Allure Report    </a>
@@ -112,7 +117,7 @@ clean
 ## Основная страница отчёта
 
 <p align="center">  
-<img title="Allure Overview Dashboard" src="media/AllureReport.png" width="850">  
+<a href="https://www.jetbrains.com/idea/"> <img title="Allure Overview Dashboard" src="media/AllureReport.png" width="850">  
 </p>  
 
 ## <img alt="Allure" height="25" src="media/Allure_TestOps.svg" width="25"/></a>  <a name="Allure TestOps"></a>Allure TestOps    </a>
@@ -120,15 +125,16 @@ clean
 ## Основная страница отчёта Allure TestOps
 
 <p align="center">  
-<img title="Allure Overview Dashboard" src="media/AllureTestOpsReport.png" width="850">  
+<a href="https://allure.autotests.cloud/project/4783/launches"> <img title="Allure Overview Dashboard" src="media/AllureTestOpsReport.png" width="850">  
 </p>  
 
 ## Список тест-кейсов
 
 <p align="center">  
-<img title="Allure Overview Dashboard" src="media/TestCase.png" width="850">  
+<a href="https://allure.autotests.cloud/project/4783/test-cases?treeId=0"> <img title="Allure Overview Dashboard" src="media/TestCase.png" width="850">  
 </p>  
 ____
+
 ## <img alt="Allure" height="25" src="media/Telegram.svg" width="25"/></a> Уведомление в Telegram при помощи бота
 ____
 <p align="center">  
