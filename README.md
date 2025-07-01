@@ -13,7 +13,7 @@
 - [Allure TestOps](#img-altallure-height25-srcmediaallure_testopssvg-width25a-a-nameallure-testopsaallure-testops-a)
 - [Уведомление в Telegram](#img-altallure-height25-srcmediatelegramsvg-width25a-уведомление-в-telegram-при-помощи-бота)
 - [Примеры видео выполнения web тестов](#img-altselenoid-height25-srcmediaselenoidsvg-width25a-примеры-видео-выполнения-web-тестов-в-selenoid)
-- [Примеры видео выполнения мобильных тестов](#img-altselenoid-height25-srcmediabrowserstacksvg-width25a-примеры-видео-выполнения-мобильных-тестов-в-browserstack)
+- [Примеры видео выполнения мобильных тестов](#browserstack-video-examples)
 
 <a id="tools"></a>
 
@@ -162,6 +162,7 @@ ____
 <img title="Selenoid Video" src="media/hoverAndCredit.gif" width="550" height="350"  alt="video">   
 </p>
 
+<a id="browserstack-video-examples"></a>
 ## <img alt="Selenoid" height="25" src="media/Browserstack.svg" width="25"/></a> Примеры видео выполнения мобильных тестов в BrowserStack
 
 ____
