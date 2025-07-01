@@ -143,7 +143,7 @@ ____
 
 ____
 
-## <img alt="Selenoid" height="25" src="media/Selenoid.svg" width="25"/></a> Примеры видео выполнения тестов в Selenoid и BrowserStack
+## <img alt="Selenoid" height="25" src="media/Selenoid.svg" width="25"/></a> Примеры видео выполнения web тестов в Selenoid
 
 ____
 <p align="center">
@@ -157,7 +157,11 @@ ____
 <p align="center">
 <img title="Selenoid Video" src="media/hoverAndCredit.gif" width="550" height="350"  alt="video">   
 </p>
+____
 
+## <img alt="Selenoid" height="25" src="media/Selenoid.svg" width="25"/></a> Примеры видео выполнения мобильных тестов в BrowserStack
+
+____
 <p align="center">
 <img title="Selenoid Video" src="media/badNumber-.gif" width="350" height="550"  alt="video">   
 </p>
