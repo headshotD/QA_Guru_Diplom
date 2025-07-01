@@ -29,6 +29,7 @@
 <a href="https://telegram.org/"> <img width="7%" title="Telegram" src="media/Telegram.svg">
 <a href="https://appium.io/docs/en/latest/"> <img width="7%" title="Appium" src="media/appium.svg">
 <a href="https://developer.android.com/studio"> <img width="7%" title="AndroidStudio" src="media/androidstudio.svg">
+<a href="https://www.browserstack.com/"> <img width="7%" title="BrowserStack" src="media/Browserstack.svg">
 </p>
 <a id="cases"></a>
 
@@ -159,7 +160,7 @@ ____
 </p>
 ____
 
-## <img alt="Selenoid" height="25" src="media/Selenoid.svg" width="25"/></a> Примеры видео выполнения мобильных тестов в BrowserStack
+## <img alt="Selenoid" height="25" src="media/Browserstack.svg" width="25"/></a> Примеры видео выполнения мобильных тестов в BrowserStack
 
 ____
 <p align="center">
