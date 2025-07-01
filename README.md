@@ -57,11 +57,10 @@
 
 ##  <img alt="Jenkins" height="25" src="media/Jenkins.svg" width="25"/> Сборка в [Jenkins](https://jenkins.autotests.cloud/job/ONamozov_diplom_34/)
 
-<p align="center">  
-
-<a href="https://jenkins.autotests.cloud/job/ONamozov_diplom_34/> <img src="media/JenkinsBuild.png" alt="Jenkins" width="950"/></a>
-
+<p align="center">
+<a href="https://jenkins.autotests.cloud/job/ONamozov_diplom_34"> <img title="Jenkins" src="media/JenkinsBuild.png" width="950">  
 </p>
+
 
 ## :ballot_box_with_check: Параметры сборки в Jenkins:
 
@@ -118,7 +117,7 @@ clean
 ## Основная страница отчёта
 
 <p align="center">  
-<a href="https://jenkins.autotests.cloud/job/ONamozov_diplom_34/> <img title="Allure Overview Dashboard" src="media/AllureReport.png" width="850">  
+<a href="https://jenkins.autotests.cloud/job/ONamozov_diplom_34"> <img title="Allure Overview Dashboard" src="media/AllureReport.png" width="850">  
 </p>  
 
 ## <img alt="Allure" height="25" src="media/Allure_TestOps.svg" width="25"/></a>  <a name="Allure TestOps"></a>Allure TestOps    </a>
