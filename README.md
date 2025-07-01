@@ -57,10 +57,9 @@
 
 ## <img alt="Jenkins" height="25" src="media/Jenkins.svg" width="25"/> Сборка в [Jenkins](https://jenkins.autotests.cloud/job/ONamozov_diplom_34/)
 
-<p align="center">  
+<p align="center">
 
-<a href="https://jenkins.autotests.cloud/job/ONamozov_diplom_34/> <img src="media/JenkinsBuild.png" alt="Jenkins" width="950"/></a>
-
+<a href="https://jenkins.autotests.cloud/job/ONamozov_diplom_34/> <img title="Jenkins Build" src="media/JenkinsBuild.png" alt="Jenkins" width="950"/></a>
 </p>
 
 ## :ballot_box_with_check: Параметры сборки в Jenkins:
