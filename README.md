@@ -126,9 +126,9 @@ clean
 </p>  
 
 <a id="allure-testops"></a>
-## <img alt="Allure" height="25" src="media/Allure_TestOps.svg" width="25"/></a>  <a name="Allure TestOps"></a>Allure TestOps    </a>
+## <img alt="Allure" height="25" src="media/Allure_TestOps.svg" width="25"/></a>  <a name="Allure TestOps"></a>[Allure TestOps](https://allure.autotests.cloud/project/4783/launches)    </a>
 
-## Основная страница отчёта [Allure TestOps](https://allure.autotests.cloud/project/4783/launches)
+## Основная страница отчёта Allure TestOps
 
 <p align="center">  
 <a href="https://allure.autotests.cloud/project/4783/launches"> <img title="Allure Overview Dashboard" src="media/AllureTestOpsReport.png" width="850">  
