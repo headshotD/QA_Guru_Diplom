@@ -19,7 +19,7 @@ public class MainAlfaWebTest extends TestBase {
     EnterAlfaBankPage enterAlfaBankPage = new EnterAlfaBankPage();
     CreditCalculatorPage creditCalculatorPage = new CreditCalculatorPage();
     EnterSideBarPage enterSideBarPage = new EnterSideBarPage();
-    BecomeCustomers becomeCustomers = new BecomeCustomers();
+    BecomeCustomersPage becomeCustomers = new BecomeCustomersPage();
 
     @Test
     @Severity(SeverityLevel.CRITICAL)

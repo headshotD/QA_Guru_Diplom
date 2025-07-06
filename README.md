@@ -117,24 +117,24 @@ clean
 -DbrowserRemote="https://login:password@${BROWSER_REMOTE}/wd/hub"
 ```
 <a id="allure-report"></a>
-## <img alt="Allure" height="25" src="media/Allure.svg" width="25"/></a>  <a name="Allure"></a>Allure Report    </a>
+## <img alt="Allure" height="25" src="media/Allure.svg" width="25"/></a>  <a name="Allure"></a>[Allure Report](https://jenkins.autotests.cloud/job/ONamozov_diplom_34/69/allure/)    </a>
 
 ## Основная страница отчёта
 
 <p align="center">  
-<a href="https://jenkins.autotests.cloud/job/ONamozov_diplom_34"> <img title="Allure Overview Dashboard" src="media/AllureReport.png" width="850">  
+<a href="https://jenkins.autotests.cloud/job/ONamozov_diplom_34/69/allure/"> <img title="Allure Overview Dashboard" src="media/AllureReport.png" width="850">  
 </p>  
 
 <a id="allure-testops"></a>
 ## <img alt="Allure" height="25" src="media/Allure_TestOps.svg" width="25"/></a>  <a name="Allure TestOps"></a>Allure TestOps    </a>
 
-## Основная страница отчёта Allure TestOps
+## Основная страница отчёта [Allure TestOps](https://allure.autotests.cloud/project/4783/launches)
 
 <p align="center">  
 <a href="https://allure.autotests.cloud/project/4783/launches"> <img title="Allure Overview Dashboard" src="media/AllureTestOpsReport.png" width="850">  
 </p>  
 
-## Список тест-кейсов
+## [Список](https://allure.autotests.cloud/project/4783/test-cases?treeId=0) тест-кейсов
 
 <p align="center">  
 <a href="https://allure.autotests.cloud/project/4783/test-cases?treeId=0"> <img title="Allure Overview Dashboard" src="media/TestCase.png" width="850">  
